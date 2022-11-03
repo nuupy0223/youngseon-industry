@@ -1,0 +1,31 @@
+/* .hero_img{position: absolute; right: 20%;} */
+
+/* .prc_img {display: flex;
+    justify-content: space-evenly;
+    flex-wrap : wrap;
+    text-align: center;
+    flex: 1 1 40%;} */
+
+/* .prc_img>img{margin: 0 10px 20px;} */
+
+.box3{position: relative; overflow: hidden;}
+.box3>.item:nth-child(2)>img{object-fit: cover; height: 100%; border-radius: 1rem;}
+.box3>.item:first-child~*{flex: 1 1;}
+.box3>.item:first-child{flex: 2 1; }
+
+
+@media all and (max-width: 768px) {
+    html { font-size: 100%; }  /*이제 문서 내 모든 rem 단위가 영향을 받습니다.*/
+  }
+
+@media screen and (max-width: 768px) {
+    .sub_t {display: none;}
+    .title_t{font-size: 2.3rem; line-height: 2.6rem; margin: 0 10px; padding: 0; }
+    .title_t>span{
+        background-color: rgba(255, 255, 255, 0.8); 
+        padding: 0;
+    }
+    .box3{flex-wrap: wrap;}
+    .box3>.item{flex: 0 0; min-width: 60%;}
+    .box3>.item:nth-child(2){padding-top: 1rem;}
+}

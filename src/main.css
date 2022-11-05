@@ -1,13 +1,14 @@
 
-    *{font-family: Pretendard; font-size: 100%;}
+    *{font-family: Pretendard; font-size: 100%; }
    .wrap>div{position: relative;}
+
     .navBar {
         display: flex;
-        /* justify-content: space-around; */
         justify-content: space-between;
         align-items: center;
         padding: 12px;
       }
+
       .navBar_toggleBtn {
         display: none;
       }

@@ -11,7 +11,7 @@ export default function Gnb() {
         <div className="navBar_logo">
         <Link to="/" className="pr-2.5 flex items-center">
           <img src={logo} alt="logo" />
-          <span className="text-lg font-semibold">영 선 산 업</span>
+          <span className="text-lg font-bold pl-2.5">영 선 산 업</span>
           </Link>
         </div>
       

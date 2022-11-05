@@ -8,10 +8,11 @@
 
 /* .prc_img>img{margin: 0 10px 20px;} */
 
+
 .box3{position: relative; overflow: hidden;}
 .box3>.item:nth-child(2)>img{object-fit: cover; height: 100%; border-radius: 1rem;}
 .box3>.item:first-child~*{flex: 1 1;}
-.box3>.item:first-child{flex: 2 1; }
+.box3>.item:first-child{flex: 1 1; }
 
 
 @media all and (max-width: 768px) {

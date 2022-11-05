@@ -9,6 +9,8 @@ module.exports = {
         lightpink: "#FAF4F6",
         blue: "#0075FF",
         gray: "#F4F4F4",
+        subgray:"#626262",
+        subgray2:"#F4F4F4",
         a: "#f44336",
         b: "#e91e63",
         c: "#9c27b0",

@@ -220,7 +220,7 @@ export default function Editor({ initialItem, elStage, initialOnChange, setSelec
             <ColorPicker width={window.innerWidth / 2} height={220} color={color} onChange={setColor} hideHSV dark />
             <div className="flex justify-end">
               <div
-                className="bg-blue w-1/2 py-4 rounded-md flex justify-center mt-5"
+                className="bg-blue w-full md:w-1/2 mx-auto py-4 rounded-md flex justify-center mt-5"
                 onClick={() => setPLToggle(!PLToggle)}
               >
                 <p className="text-white">적 용 하 기</p>

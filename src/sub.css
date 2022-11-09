@@ -14,6 +14,10 @@
 .box3>.item:first-child~*{flex: 1 1;}
 .box3>.item:first-child{flex: 1 1; }
 
+.hm_bg{background: url(image/mapBg.png) no-repeat center;}
+.design_bg{background: url(image/designBack.png) no-repeat center;}
+.cont_bg{background: url(image/contactBg.png) no-repeat center;}
+/* .eq_bg{background: url(image/equipment1.png) no-repeat center;} */
 
 @media all and (max-width: 768px) {
     html { font-size: 100%; }  /*이제 문서 내 모든 rem 단위가 영향을 받습니다.*/

@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import contactBg from "../image/contactBg.png";
+// import contactBg from "../image/contactBg.png";
 import { db, storage } from "../firebase";
 import { doc, setDoc } from "firebase/firestore";
 import { ref, uploadBytes } from "firebase/storage";
@@ -102,164 +102,167 @@ function ContactForm() {
       ) : (
         ""
       )}
-      <div className="relative mb-20">
-        <img src={contactBg} alt="map background"></img>
-        <div className="px-28 mt-14 mb-20 absolute top-0 flex-col">
-          <p className="text-blue pb-5 text-3xl  font-semibold">견적 문의</p>
-          <p className="pb-2.5">영선산업에서 제공하는 최상의 품질과 기술력을 직접 경험해보세요.</p>
-          <p>문의를 남겨주시면 최대한 빠르게 답변드리겠습니다.</p>
+      {/* 소개 시작 */}
+      <div className="wrap">
+        <div className="cont_bg h-[30vh] md:h-[300px]">
+          <div className="area px-3.5 ms:px-0">
+            <p className="pt-[5rem] md:pt-[112px] text-3xl leading-[2.8rem] text-blue pb-5 font-bold">견적 문의</p>
+            <p className="text-subgray pb-2.5 leading-[1.8rem]">영선산업에서 제공하는 최상의 품질과 기술력을 직접 경험해보세요.<br />
+            문의를 남겨주시면 최대한 빠르게 답변드리겠습니다.</p>
+          </div>
         </div>
-      </div>
-      <div className="px-28">
-        <div className="bg-gray py-5 pl-16 mb-8 rounded-md">
-          <p className="font-semibold mb-2">
-            정보 작성 및 이미지 첨부 후 문의하기 버튼을 누르시면 견적서가 발송됩니다.
-          </p>
-          <p>
-            디자인파일 또는 로고, 그 외 참조파일은 40MB까지 첨부 가능합니다. 40MB를 초과하는 경우
-            메일(ystie@naver.com)로 보내주세요.
-          </p>
-        </div>
-        <div>
-          <div className="flex py-3">
-            <div className="font-semibold bg-gray w-44 flex justify-center py-2.5 rounded-md">이름</div>
-            <form>
-              <input
-                className="border border-textgray py-2.5 pl-3 rounded-md w-80 ml-7 text-textgray"
-                value={name}
-                placeholder="이름을 입력해주세요."
-                name="name"
-                onChange={onChange}
-              />
-            </form>
+        {/* 본문 시작 */}
+        <div className="area px-3.5 ms:px-0">
+          <div className="bg-gray py-5 px-6 md:px-16 mb-8 mt-10 rounded-md">
+            <p className="font-semibold mb-2">
+              정보 작성 및 이미지 첨부 후 문의하기 버튼을 누르시면 견적서가 발송됩니다.
+            </p>
+            <p>
+              디자인파일 또는 로고, 그 외 참조파일은 40MB까지 첨부 가능합니다. 40MB를 초과하는 경우
+              메일(ystie@naver.com)로 보내주세요.
+            </p>
           </div>
-          <div className="flex py-3">
-            <div className="font-semibold bg-gray w-44 flex justify-center py-2.5 rounded-md">회사명</div>
-            <form>
-              <input
-                className="border border-textgray py-2.5 pl-3 rounded-md w-80 ml-7 text-textgray"
-                value={company}
-                placeholder="회사명을 입력해주세요."
-                name="company"
-                onChange={onChange}
-              />
-            </form>
-          </div>
-          <div className="flex py-3">
-            <div className="font-semibold bg-gray w-44 flex justify-center py-2.5 rounded-md">연락처</div>
-            <form>
-              <input
-                className="border border-textgray py-2.5 pl-3 rounded-md w-80 ml-7 text-textgray"
-                value={phone}
-                placeholder="연락처를 입력해주세요."
-                name="phone"
-                onChange={onChange}
-              />
-            </form>
-          </div>
-          <div className="flex py-3">
-            <div className="font-semibold bg-gray w-44 flex justify-center py-2.5 rounded-md">이메일</div>
-            <form>
-              <input
-                className="border border-textgray py-2.5 pl-3 rounded-md w-80 ml-7 text-textgray"
-                value={email}
-                placeholder="이메일을 입력해주세요."
-                name="email"
-                onChange={onChange}
-              />
-            </form>
-          </div>
-          <form onSubmit={handleSubmit}>
-            <div className="flex items-center py-3">
-              <label className="font-semibold bg-gray w-44 flex justify-center py-2.5 rounded-md">넥타이 종류</label>
-              <div className="pl-4">
-                <RadioInput label="일반 넥타이(날염)" value="일반 넥타이(날염)" checked={tie} setter={setTie} />
-                <RadioInput label="일반 넥타이(선염)" value="일반 넥타이(선염)" checked={tie} setter={setTie} />
-                <RadioInput label="지퍼타이" value="지퍼타이" checked={tie} setter={setTie} />
-                <RadioInput label="보타이" value="보타이" checked={tie} setter={setTie} />
-                <RadioInput label="스카프" value="스카프" checked={tie} setter={setTie} />
-              </div>
-            </div>
-            <div className="flex items-center py-3">
-              <label className="font-semibold bg-gray w-44 flex justify-center py-2.5 rounded-md">원단 재질</label>
-              <div className="pl-4">
-                <RadioInput label="실크" value="실크" checked={fabric} setter={setFabric} />
-                <RadioInput label="폴리에스터" value="폴리에스터" checked={fabric} setter={setFabric} />
-              </div>
-            </div>
-            <div className="flex items-center py-3">
-              <label className="font-semibold bg-gray w-44 flex justify-center py-2.5 rounded-md">디자인</label>
-              <div className="pl-4 flex items-center ">
-                <RadioInput label="디자인 있음" value="디자인 있음" checked={design} setter={setDesign} />
-                <RadioInput label="디자인 없음" value="디자인 없음" checked={design} setter={setDesign} />
-                <React.Fragment>
-                  <div
-                    className="border border-textgray py-2 rounded-md w-80 flex items-center cursor-pointer"
-                    onClick={handleButtonClick}
-                  >
-                    <input
-                      className="px-2 py-1 rounded-md mx-1 "
-                      type="file"
-                      accept="image/*"
-                      ref={fileInput}
-                      onChange={handleChange}
-                    />
-                  </div>
-                </React.Fragment>
-              </div>
-            </div>
-            <div className="flex items-center py-3">
-              <label className="font-semibold bg-gray w-44 flex justify-center py-2.5 rounded-md">라벨</label>
-              <div className="pl-4">
-                <RadioInput label="품표(기본)" value="품표(기본)" checked={label} setter={setLabel} />
-                <RadioInput label="로고 라벨" value="로고 라벨" checked={label} setter={setLabel} />
-                <RadioInput label="필요 없음" value="필요 없음" checked={label} setter={setLabel} />
-              </div>
-            </div>
-            <div className="flex items-center py-3">
-              <label className="font-semibold bg-gray w-44 flex justify-center py-2.5 rounded-md">포장</label>
-              <div className="pl-4">
-                <RadioInput label="개별 폴리백(기본)" value="개별 폴리백(기본)" checked={box} setter={setBox} />
-                <RadioInput label="고급 하드케이스" value="고급 하드케이스" checked={box} setter={setBox} />
-                <RadioInput label="일반 케이스(종이)" value="일반 케이스(종이)" checked={box} setter={setBox} />
-              </div>
-            </div>
-            <div className="flex items-center py-3">
-              <label className="font-semibold bg-gray w-44 flex justify-center py-2.5 rounded-md">수량</label>
-              <div className="pl-4 ">
-                <RadioInput label="100개" value="100개" checked={account} setter={setAccount} />
-                <RadioInput label="300개" value="300개" checked={account} setter={setAccount} />
-                <RadioInput label="500개" value="500개" checked={account} setter={setAccount} />
-                <RadioInput label="기타" value="기타" checked={account} setter={setAccount} />
+          <div>
+            <div className="flex py-3">
+              <div className="font-semibold bg-gray w-44 flex justify-center py-2.5 rounded-md">이름</div>
+              <form>
                 <input
-                  className="border border-textgray py-2.5 pl-3 rounded-md w-80 ml-2 text-textgray"
-                  value={accountNumber}
-                  placeholder="수량을 입력해주세요."
-                  name="accountNumber"
+                  className="border border-textgray py-2.5 pl-3 rounded-md w-80 ml-7 text-textgray"
+                  value={name}
+                  placeholder="이름을 입력해주세요."
+                  name="name"
                   onChange={onChange}
                 />
-              </div>
+              </form>
             </div>
-            <div className="flex py-3 w-full">
-              <label className="font-semibold bg-gray w-44 flex justify-center h-12 items-center rounded-md">
-                요청사항
-              </label>
-              <div className="pl-4 w-3/4">
-                <textarea
-                  className="border border-textgray py-2.5 pl-3 rounded-md w-full  text-textgray"
-                  value={request}
-                  placeholder="요청사항을 입력해주세요."
-                  name="request"
+            <div className="flex py-3">
+              <div className="font-semibold bg-gray w-44 flex justify-center py-2.5 rounded-md">회사명</div>
+              <form>
+                <input
+                  className="border border-textgray py-2.5 pl-3 rounded-md w-80 ml-7 text-textgray"
+                  value={company}
+                  placeholder="회사명을 입력해주세요."
+                  name="company"
                   onChange={onChange}
                 />
+              </form>
+            </div>
+            <div className="flex py-3">
+              <div className="font-semibold bg-gray w-44 flex justify-center py-2.5 rounded-md">연락처</div>
+              <form>
+                <input
+                  className="border border-textgray py-2.5 pl-3 rounded-md w-80 ml-7 text-textgray"
+                  value={phone}
+                  placeholder="연락처를 입력해주세요."
+                  name="phone"
+                  onChange={onChange}
+                />
+              </form>
+            </div>
+            <div className="flex py-3">
+              <div className="font-semibold bg-gray w-44 flex justify-center py-2.5 rounded-md">이메일</div>
+              <form>
+                <input
+                  className="border border-textgray py-2.5 pl-3 rounded-md w-80 ml-7 text-textgray"
+                  value={email}
+                  placeholder="이메일을 입력해주세요."
+                  name="email"
+                  onChange={onChange}
+                />
+              </form>
+            </div>
+            <form onSubmit={handleSubmit}>
+              <div className="flex items-center py-3">
+                <label className="font-semibold bg-gray w-44 flex justify-center py-2.5 rounded-md">넥타이 종류</label>
+                <div className="pl-4">
+                  <RadioInput label="일반 넥타이(날염)" value="일반 넥타이(날염)" checked={tie} setter={setTie} />
+                  <RadioInput label="일반 넥타이(선염)" value="일반 넥타이(선염)" checked={tie} setter={setTie} />
+                  <RadioInput label="지퍼타이" value="지퍼타이" checked={tie} setter={setTie} />
+                  <RadioInput label="보타이" value="보타이" checked={tie} setter={setTie} />
+                  <RadioInput label="스카프" value="스카프" checked={tie} setter={setTie} />
+                </div>
               </div>
-            </div>
-            <div className="flex justify-center mt-12">
-              <button className="bg-blue text-white rounded-md w-44 h-12 mb-24" type="submit">
-                견적 문의하기
-              </button>
-            </div>
-          </form>
+              <div className="flex items-center py-3">
+                <label className="font-semibold bg-gray w-44 flex justify-center py-2.5 rounded-md">원단 재질</label>
+                <div className="pl-4">
+                  <RadioInput label="실크" value="실크" checked={fabric} setter={setFabric} />
+                  <RadioInput label="폴리에스터" value="폴리에스터" checked={fabric} setter={setFabric} />
+                </div>
+              </div>
+              <div className="flex items-center py-3">
+                <label className="font-semibold bg-gray w-44 flex justify-center py-2.5 rounded-md">디자인</label>
+                <div className="pl-4 flex items-center ">
+                  <RadioInput label="디자인 있음" value="디자인 있음" checked={design} setter={setDesign} />
+                  <RadioInput label="디자인 없음" value="디자인 없음" checked={design} setter={setDesign} />
+                  <React.Fragment>
+                    <div
+                      className="border border-textgray py-2 rounded-md w-80 flex items-center cursor-pointer"
+                      onClick={handleButtonClick}
+                    >
+                      <input
+                        className="px-2 py-1 rounded-md mx-1 "
+                        type="file"
+                        accept="image/*"
+                        ref={fileInput}
+                        onChange={handleChange}
+                      />
+                    </div>
+                  </React.Fragment>
+                </div>
+              </div>
+              <div className="flex items-center py-3">
+                <label className="font-semibold bg-gray w-44 flex justify-center py-2.5 rounded-md">라벨</label>
+                <div className="pl-4">
+                  <RadioInput label="품표(기본)" value="품표(기본)" checked={label} setter={setLabel} />
+                  <RadioInput label="로고 라벨" value="로고 라벨" checked={label} setter={setLabel} />
+                  <RadioInput label="필요 없음" value="필요 없음" checked={label} setter={setLabel} />
+                </div>
+              </div>
+              <div className="flex items-center py-3">
+                <label className="font-semibold bg-gray w-44 flex justify-center py-2.5 rounded-md">포장</label>
+                <div className="pl-4">
+                  <RadioInput label="개별 폴리백(기본)" value="개별 폴리백(기본)" checked={box} setter={setBox} />
+                  <RadioInput label="고급 하드케이스" value="고급 하드케이스" checked={box} setter={setBox} />
+                  <RadioInput label="일반 케이스(종이)" value="일반 케이스(종이)" checked={box} setter={setBox} />
+                </div>
+              </div>
+              <div className="flex items-center py-3">
+                <label className="font-semibold bg-gray w-44 flex justify-center py-2.5 rounded-md">수량</label>
+                <div className="pl-4 ">
+                  <RadioInput label="100개" value="100개" checked={account} setter={setAccount} />
+                  <RadioInput label="300개" value="300개" checked={account} setter={setAccount} />
+                  <RadioInput label="500개" value="500개" checked={account} setter={setAccount} />
+                  <RadioInput label="기타" value="기타" checked={account} setter={setAccount} />
+                  <input
+                    className="border border-textgray py-2.5 pl-3 rounded-md w-80 ml-2 text-textgray"
+                    value={accountNumber}
+                    placeholder="수량을 입력해주세요."
+                    name="accountNumber"
+                    onChange={onChange}
+                  />
+                </div>
+              </div>
+              <div className="flex py-3 w-full">
+                <label className="font-semibold bg-gray w-44 flex justify-center h-12 items-center rounded-md">
+                  요청사항
+                </label>
+                <div className="pl-4 w-3/4">
+                  <textarea
+                    className="border border-textgray py-2.5 pl-3 rounded-md w-full  text-textgray"
+                    value={request}
+                    placeholder="요청사항을 입력해주세요."
+                    name="request"
+                    onChange={onChange}
+                  />
+                </div>
+              </div>
+              <div className="flex justify-center mt-12">
+                <button className="bg-blue text-white rounded-md w-44 h-12 mb-24" type="submit">
+                  견적 문의하기
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </>

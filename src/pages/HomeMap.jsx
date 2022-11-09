@@ -1,52 +1,53 @@
 import { Map, MapMarker } from "react-kakao-maps-sdk";
-import mapBg from "../image/mapBg.png";
+// import mapBg from "../image/mapBg.png";
 
 function HomeMap() {
   return (
     <>
-      <div className="relative mb-20">
-        <img src={mapBg} alt="map background"></img>
-        <div className="px-28 mt-14 mb-20 absolute top-0">
-          <p className="text-blue pb-5 text-3xl font-semibold">오시는 길</p>
-          <p className="pb-2.5">영선산업은 가양네거리 근처</p>
-          <p>큰길거리에 위치하여 쉽게 찾아오실 수 있습니다.</p>
-        </div>
-      </div>
-      <div className="px-28">
-        <div className="flex pb-20">
-          <div className="w-full">
-            <p className="text-blue pb-4">주소</p>
-            <div className="flex">
-              <div className="font-semibold">
-                <p className="pb-2.5">지번주소</p>
-                <p>도로명 주소</p>
+        <div className="wrap">
+          <div className="hm_bg h-[30vh] md:h-[300px]">
+              <div className="area px-3.5 ms:px-0">
+                <p className="pt-[5rem] md:pt-[112px] text-3xl leading-[2.8rem] text-blue pb-5 font-bold">오시는 길</p>
+                <p className="text-subgray pb-2.5 leading-[1.8rem]">영선산업은 가양네거리 근처<br/>
+                큰길거리에 위치하여 쉽게 찾아오실 수 있습니다.</p>
               </div>
-              <div className="pl-6">
-                <p className="pb-2.5">대전 동구 가양2동 408-7</p>
-                <p>대전 광역시 동구 우암로 246번길 9-16</p>
-              </div>
-            </div>
-          </div>
-          <div className="w-full">
-            <p className="text-blue pb-4">주소</p>
-            <div className="flex">
-              <div className="font-semibold">
-                <p className="pb-2.5">지번주소</p>
-                <p>도로명 주소</p>
-              </div>
-              <div className="pl-6">
-                <p className="pb-2.5">대전 동구 가양2동 408-7</p>
-                <p>대전 광역시 동구 우암로 246번길 9-16</p>
-              </div>
-            </div>
           </div>
         </div>
-        <div className="pb-20">
-          <Map center={{ lat: 36.34416288797099, lng: 127.44461677147773 }} style={{ width: "100%", height: "360px" }}>
-            <MapMarker position={{ lat: 36.34416288797099, lng: 127.44461677147773 }}></MapMarker>
-          </Map>
+        {/* 본문 시작 */}
+        <div className="area">
+        <div>
+          <article className="flex px-3.5 ms:px-0 mt-10">
+            <dl className="mr-[10%] md:w-[50%] text-lg leading-8">
+              <h6 className="text-blue font-bold pb-8">주소</h6>
+                <div className="flex items-center">
+                  <dt className="font-bold md:w-24">지번 주소</dt>
+                  <dd className="text-base">대전 동구 가양2동 408-7</dd>
+                </div>
+                <div className="flex items-center">
+                  <dt className="font-bold md:w-24">도로명 주소</dt>
+                  <dd className="text-base">대전 광역시 동구 우암로 246번길 9-16</dd>
+                </div>
+            </dl>
+            <dl className="text-lg leading-8"><h6 className="text-blue font-bold pb-8">연락처</h6>
+              <div className="flex items-center">
+                <dt className="font-bold md:w-24">전화</dt>
+                <dd className="text-base">010-4945-7422</dd>
+              </div>
+              <div className="flex items-center">
+                <dt className="font-bold md:w-24">팩스</dt>
+                <dd className="text-base">042-632-4442</dd>
+              </div>
+            </dl>
+          </article>
+
+          
+          <div className="pt-10 pb-20">
+            <Map center={{ lat: 36.34416288797099, lng: 127.44461677147773 }} style={{ width: "100%", height: "360px" }}>
+              <MapMarker position={{ lat: 36.34416288797099, lng: 127.44461677147773 }}></MapMarker>
+            </Map>
+          </div>
         </div>
-      </div>
+        </div>
     </>
   );
 }

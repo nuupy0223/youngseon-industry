@@ -69,7 +69,7 @@ function Home() {
           <div className="area">
             <div className="box3 flex pb-36 justify-between ">
               <div className="conts item">
-                <p className="font-bold pb-6 md:pb-12 text-[1.375rem] leading-[2.275rem]">높은 품질로 전국 기업 뿐만 아니라 관공서,<br />
+                <p className="font-bold pb-6 md:pb-12 text-[1.375rem] leading-[2.275rem] tracking-[-.05rem] md:tracking-normal">높은 품질로 전국 기업 뿐만 아니라 관공서,<br />
                 각종 단체, 행사, 기념과 홍보에 쓰이는 상품을 제작합니다.</p>
                 <p className="text-subgray pb-5 leading-[1.8rem]">영선산업은 이미지 홍보 단체 상품에 기업의 아이덴티티를 녹여내어<br/>
                 <span className="text-subgray ">

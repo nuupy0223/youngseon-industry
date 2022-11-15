@@ -5,7 +5,6 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "./tailwind.css";
 import "./main.css";
-import "./sub.css";
 import "./font/font.css"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

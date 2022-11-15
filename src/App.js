@@ -7,6 +7,7 @@ import Gnb from "./components/gnb";
 import Fotter from "./components/fotter";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import ContactForm from "./pages/Contact";
+import autoprefixer from "autoprefixer";
 
 function App() {
   return (

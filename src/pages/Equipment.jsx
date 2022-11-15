@@ -10,7 +10,7 @@ function Equipment() {
             외적 이미지 및 기업이 주는 인상에 크게 기여할 수 있는 최상급 품질의 상품을 제작해드립니다.</p>
           </div>
         </div>
-        <div className="area pb-12 grid grid-cols-3 gap-8 content-start justify-items-stretch">
+        <div className="area pb-12 grid sm:grid-cols-3 sm:gap-8 gap-4 content-start justify-items-stretch px-3.5 md:px-0">
             <img src={img} alt="img1" />
             <img src={img} alt="img1" />
             <img src={img} alt="img1" />

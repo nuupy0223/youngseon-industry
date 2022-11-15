@@ -16,25 +16,25 @@ function HomeMap() {
         {/* 본문 시작 */}
         <div className="area">
         <div>
-          <article className="flex px-3.5 ms:px-0 mt-10">
-            <dl className="mr-[10%] md:w-[50%] text-lg leading-8">
+          <article className="grid grid-cols-[1.5fr_1fr] px-3.5 sm:px-0 mt-10 gap-4">
+            <dl className="text-lg leading-8">
               <h6 className="text-blue font-bold pb-8">주소</h6>
                 <div className="flex items-center">
-                  <dt className="font-bold md:w-24">지번 주소</dt>
+                  <dt className="font-bold md:w-24 pr-3">지번 주소</dt>
                   <dd className="text-base">대전 동구 가양2동 408-7</dd>
                 </div>
                 <div className="flex items-center">
-                  <dt className="font-bold md:w-24">도로명 주소</dt>
+                  <dt className="font-bold md:w-24 pr-3">도로명 주소</dt>
                   <dd className="text-base">대전 광역시 동구 우암로 246번길 9-16</dd>
                 </div>
             </dl>
             <dl className="text-lg leading-8"><h6 className="text-blue font-bold pb-8">연락처</h6>
               <div className="flex items-center">
-                <dt className="font-bold md:w-24">전화</dt>
+                <dt className="font-bold md:w-24 pr-3">전화</dt>
                 <dd className="text-base">010-4945-7422</dd>
               </div>
               <div className="flex items-center">
-                <dt className="font-bold md:w-24">팩스</dt>
+                <dt className="font-bold md:w-24 pr-3">팩스</dt>
                 <dd className="text-base">042-632-4442</dd>
               </div>
             </dl>

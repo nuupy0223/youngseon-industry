@@ -124,10 +124,10 @@ function ContactForm() {
           </div>
           <div>
             <div className="flex py-3">
-              <div className="font-semibold bg-gray w-44 flex justify-center py-2.5 rounded-md">이름</div>
+              <div className="font-semibold bg-gray w-44 flex justify-center rounded-md leading-[3.75rem]">이름</div>
               <form>
                 <input
-                  className="border border-textgray py-2.5 pl-3 rounded-md w-80 ml-7 text-textgray"
+                  className="border border-textgray py-2.5 pl-3 rounded-md w-80 ml-7 text-textgray h-full"
                   value={name}
                   placeholder="이름을 입력해주세요."
                   name="name"
@@ -135,11 +135,11 @@ function ContactForm() {
                 />
               </form>
             </div>
-            <div className="flex py-3">
-              <div className="font-semibold bg-gray w-44 flex justify-center py-2.5 rounded-md">회사명</div>
+            <div className="flex py-4">
+              <div className="font-semibold bg-gray w-44 flex justify-center leading-[3.75rem] rounded-md">회사명</div>
               <form>
                 <input
-                  className="border border-textgray py-2.5 pl-3 rounded-md w-80 ml-7 text-textgray"
+                  className="border border-textgray py-2.5 pl-3 rounded-md w-80 ml-7 text-textgray h-full"
                   value={company}
                   placeholder="회사명을 입력해주세요."
                   name="company"
@@ -147,11 +147,11 @@ function ContactForm() {
                 />
               </form>
             </div>
-            <div className="flex py-3">
-              <div className="font-semibold bg-gray w-44 flex justify-center py-2.5 rounded-md">연락처</div>
+            <div className="flex py-4">
+              <div className="font-semibold bg-gray w-44 flex justify-center leading-[3.75rem] rounded-md">연락처</div>
               <form>
                 <input
-                  className="border border-textgray py-2.5 pl-3 rounded-md w-80 ml-7 text-textgray"
+                  className="border border-textgray py-2.5 pl-3 rounded-md w-80 ml-7 text-textgray h-full"
                   value={phone}
                   placeholder="연락처를 입력해주세요."
                   name="phone"
@@ -159,11 +159,11 @@ function ContactForm() {
                 />
               </form>
             </div>
-            <div className="flex py-3">
-              <div className="font-semibold bg-gray w-44 flex justify-center py-2.5 rounded-md">이메일</div>
+            <div className="flex py-4">
+              <div className="font-semibold bg-gray w-44 flex justify-center leading-[3.75rem] rounded-md">이메일</div>
               <form>
                 <input
-                  className="border border-textgray py-2.5 pl-3 rounded-md w-80 ml-7 text-textgray"
+                  className="border border-textgray py-2.5 pl-3 rounded-md w-80 ml-7 text-textgray h-full"
                   value={email}
                   placeholder="이메일을 입력해주세요."
                   name="email"
@@ -172,9 +172,9 @@ function ContactForm() {
               </form>
             </div>
             <form onSubmit={handleSubmit}>
-              <div className="flex items-center py-3">
-                <label className="font-semibold bg-gray w-44 flex justify-center py-2.5 rounded-md">넥타이 종류</label>
-                <div className="pl-4">
+              <div className="md:flex items-center py-4">
+                <label className="md:w-44 w-full font-semibold bg-gray leading-[3.75rem] rounded-md block text-center">넥타이 종류</label>
+                <div className="md:pl-4 grid grid-cols-2 flex-1 md:grid-cols-[repeat(auto-fill,_minmax(18%,_1fr))] gap-2 mt-4 md:mt-0">
                   <RadioInput label="일반 넥타이(날염)" value="일반 넥타이(날염)" checked={tie} setter={setTie} />
                   <RadioInput label="일반 넥타이(선염)" value="일반 넥타이(선염)" checked={tie} setter={setTie} />
                   <RadioInput label="지퍼타이" value="지퍼타이" checked={tie} setter={setTie} />
@@ -182,21 +182,21 @@ function ContactForm() {
                   <RadioInput label="스카프" value="스카프" checked={tie} setter={setTie} />
                 </div>
               </div>
-              <div className="flex items-center py-3">
-                <label className="font-semibold bg-gray w-44 flex justify-center py-2.5 rounded-md">원단 재질</label>
-                <div className="pl-4">
+              <div className="md:flex items-center py-4">
+                <label className="md:w-44 w-full font-semibold bg-gray leading-[3.75rem] rounded-md block text-center">원단 재질</label>
+                <div className="md:pl-4 grid grid-cols-2 flex-1 md:grid-cols-[repeat(auto-fill,_minmax(18%,_1fr))] gap-2 mt-4 md:mt-0">
                   <RadioInput label="실크" value="실크" checked={fabric} setter={setFabric} />
                   <RadioInput label="폴리에스터" value="폴리에스터" checked={fabric} setter={setFabric} />
                 </div>
               </div>
-              <div className="flex items-center py-3">
-                <label className="font-semibold bg-gray w-44 flex justify-center py-2.5 rounded-md">디자인</label>
-                <div className="pl-4 flex items-center ">
+              <div className="md:flex items-center py-4">
+                <label className="md:w-44 w-full font-semibold bg-gray leading-[3.75rem] rounded-md block text-center">디자인</label>
+                <div className="md:pl-4 grid grid-cols-2 auto-fill flex-1 md:grid-cols-[repeat(auto-fill,_minmax(18%,_1fr))] gap-2 mt-4 md:mt-0 items-center ">
                   <RadioInput label="디자인 있음" value="디자인 있음" checked={design} setter={setDesign} />
                   <RadioInput label="디자인 없음" value="디자인 없음" checked={design} setter={setDesign} />
                   <React.Fragment>
                     <div
-                      className="border border-textgray py-2 rounded-md w-80 flex items-center cursor-pointer"
+                      className="border border-textgray py-2 rounded-md col-span-3 md:col-end-auto flex items-center cursor-pointer"
                       onClick={handleButtonClick}
                     >
                       <input
@@ -210,45 +210,47 @@ function ContactForm() {
                   </React.Fragment>
                 </div>
               </div>
-              <div className="flex items-center py-3">
-                <label className="font-semibold bg-gray w-44 flex justify-center py-2.5 rounded-md">라벨</label>
-                <div className="pl-4">
+              <div className="md:flex items-center py-4">
+                <label className="md:w-44 w-full font-semibold bg-gray leading-[3.75rem] rounded-md block text-center">라벨</label>
+                <div className="md:pl-4 grid grid-cols-3 auto-fit flex-1 md:grid-cols-[repeat(auto-fill,_minmax(18%,_1fr))] gap-2 mt-4 md:mt-0 items-center break-keep">
                   <RadioInput label="품표(기본)" value="품표(기본)" checked={label} setter={setLabel} />
                   <RadioInput label="로고 라벨" value="로고 라벨" checked={label} setter={setLabel} />
                   <RadioInput label="필요 없음" value="필요 없음" checked={label} setter={setLabel} />
                 </div>
               </div>
-              <div className="flex items-center py-3">
-                <label className="font-semibold bg-gray w-44 flex justify-center py-2.5 rounded-md">포장</label>
-                <div className="pl-4">
+              <div className="md:flex items-center py-4">
+                <label className="md:w-44 w-full font-semibold bg-gray leading-[3.75rem] rounded-md block text-center">포장</label>
+                <div className="md:pl-4 grid grid-cols-3 auto-fit flex-1 md:grid-cols-[repeat(auto-fill,_minmax(18%,_1fr))] gap-2 mt-4 md:mt-0 items-center tracking-[-0.12rem] break-keep">
                   <RadioInput label="개별 폴리백(기본)" value="개별 폴리백(기본)" checked={box} setter={setBox} />
                   <RadioInput label="고급 하드케이스" value="고급 하드케이스" checked={box} setter={setBox} />
                   <RadioInput label="일반 케이스(종이)" value="일반 케이스(종이)" checked={box} setter={setBox} />
                 </div>
               </div>
-              <div className="flex items-center py-3">
-                <label className="font-semibold bg-gray w-44 flex justify-center py-2.5 rounded-md">수량</label>
-                <div className="pl-4 ">
+              <div className="md:flex items-center py-4">
+                <label className="md:w-44 w-full font-semibold bg-gray leading-[3.75rem] rounded-md block text-center">수량</label>
+                <div className="md:pl-4 grid grid-cols-3 auto-fit flex-1 md:grid-cols-[repeat(auto-fill,_minmax(18%,_1fr))] gap-2 mt-4 md:mt-0 items-center">
                   <RadioInput label="100개" value="100개" checked={account} setter={setAccount} />
                   <RadioInput label="300개" value="300개" checked={account} setter={setAccount} />
                   <RadioInput label="500개" value="500개" checked={account} setter={setAccount} />
+                  <div className="flex col-span-4 md:col-span-2 items-center">
                   <RadioInput label="기타" value="기타" checked={account} setter={setAccount} />
                   <input
-                    className="border border-textgray py-2.5 pl-3 rounded-md w-80 ml-2 text-textgray"
+                    className="border border-textgray py-2.5 pl-3 rounded-md ml-2 text-textgray h-full"
                     value={accountNumber}
                     placeholder="수량을 입력해주세요."
                     name="accountNumber"
                     onChange={onChange}
                   />
+                  </div>
                 </div>
               </div>
-              <div className="flex py-3 w-full">
-                <label className="font-semibold bg-gray w-44 flex justify-center h-12 items-center rounded-md">
+              <div className="md:flex py-4 w-full">
+                <label className="md:w-44 w-full font-semibold bg-gray leading-[3.75rem] h-min rounded-md block text-center">
                   요청사항
                 </label>
-                <div className="pl-4 w-3/4">
+                <div className="md:pl-4 flex-1 w-full mt-4 md:mt-0">
                   <textarea
-                    className="border border-textgray py-2.5 pl-3 rounded-md w-full  text-textgray"
+                    className="border border-textgray py-2.5 pl-3 rounded-md w-full h-[7rem] text-textgray"
                     value={request}
                     placeholder="요청사항을 입력해주세요."
                     name="request"
@@ -256,8 +258,8 @@ function ContactForm() {
                   />
                 </div>
               </div>
-              <div className="flex justify-center mt-12">
-                <button className="bg-blue text-white rounded-md w-44 h-12 mb-24" type="submit">
+              <div className="md:flex justify-center mt-16">
+                <button className="bg-blue text-white w-full md:w-[27rem] h-[5.625rem] rounded-md mb-24" type="submit">
                   견적 문의하기
                 </button>
               </div>

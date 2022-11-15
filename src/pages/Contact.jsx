@@ -104,16 +104,16 @@ function ContactForm() {
       )}
       {/* 소개 시작 */}
       <div className="wrap">
-        <div className="cont_bg h-[30vh] md:h-[300px]">
-          <div className="area px-3.5 ms:px-0">
-            <p className="pt-[5rem] md:pt-[112px] text-3xl leading-[2.8rem] text-blue pb-5 font-bold">견적 문의</p>
+        <div className="cont_bg h-[30vh] md:h-[18.75rem]">
+          <div className="area px-3.5 xl:px-0">
+            <p className="pt-20 md:pt-28 text-3xl leading-[2.8rem] text-blue pb-5 font-bold">견적 문의</p>
             <p className="text-subgray pb-2.5 leading-[1.8rem]">영선산업에서 제공하는 최상의 품질과 기술력을 직접 경험해보세요.<br />
             문의를 남겨주시면 최대한 빠르게 답변드리겠습니다.</p>
           </div>
         </div>
         {/* 본문 시작 */}
-        <div className="area px-3.5 ms:px-0">
-          <div className="bg-gray py-5 px-6 md:px-16 mb-8 mt-10 rounded-md">
+        <div className="area pt-16 md:pb-48 pb-32 px-3.5 xl:px-0">
+          <div className="bg-gray py-5 px-6 md:px-16 mb-8 rounded-md">
             <p className="font-semibold mb-2">
               정보 작성 및 이미지 첨부 후 문의하기 버튼을 누르시면 견적서가 발송됩니다.
             </p>
@@ -127,7 +127,7 @@ function ContactForm() {
               <div className="font-semibold bg-gray w-44 flex justify-center rounded-md leading-[3.75rem]">이름</div>
               <form>
                 <input
-                  className="border border-textgray py-2.5 pl-3 rounded-md w-80 ml-7 text-textgray h-full"
+                  className="border border-inpgray py-2.5 pl-3 rounded-md w-80 ml-7 focus:ring-1 focus:outline-none focus:border-blue focus:ring-blue h-full text-subgray"
                   value={name}
                   placeholder="이름을 입력해주세요."
                   name="name"
@@ -139,7 +139,7 @@ function ContactForm() {
               <div className="font-semibold bg-gray w-44 flex justify-center leading-[3.75rem] rounded-md">회사명</div>
               <form>
                 <input
-                  className="border border-textgray py-2.5 pl-3 rounded-md w-80 ml-7 text-textgray h-full"
+                  className="border border-inpgray py-2.5 pl-3 rounded-md w-80 ml-7 focus:ring-1 focus:outline-none focus:border-blue focus:ring-blue h-full text-subgray"
                   value={company}
                   placeholder="회사명을 입력해주세요."
                   name="company"
@@ -151,7 +151,7 @@ function ContactForm() {
               <div className="font-semibold bg-gray w-44 flex justify-center leading-[3.75rem] rounded-md">연락처</div>
               <form>
                 <input
-                  className="border border-textgray py-2.5 pl-3 rounded-md w-80 ml-7 text-textgray h-full"
+                  className="border border-inpgray py-2.5 pl-3 rounded-md w-80 ml-7 focus:ring-1 focus:outline-none focus:border-blue focus:ring-blue h-full text-subgray"
                   value={phone}
                   placeholder="연락처를 입력해주세요."
                   name="phone"
@@ -163,7 +163,7 @@ function ContactForm() {
               <div className="font-semibold bg-gray w-44 flex justify-center leading-[3.75rem] rounded-md">이메일</div>
               <form>
                 <input
-                  className="border border-textgray py-2.5 pl-3 rounded-md w-80 ml-7 text-textgray h-full"
+                  className="border border-inpgray py-2.5 pl-3 rounded-md w-80 ml-7 focus:ring-1 focus:outline-none focus:border-blue focus:ring-blue h-full text-subgray"
                   value={email}
                   placeholder="이메일을 입력해주세요."
                   name="email"
@@ -174,7 +174,7 @@ function ContactForm() {
             <form onSubmit={handleSubmit}>
               <div className="md:flex items-center py-4">
                 <label className="md:w-44 w-full font-semibold bg-gray leading-[3.75rem] rounded-md block text-center">넥타이 종류</label>
-                <div className="md:pl-4 grid grid-cols-2 flex-1 md:grid-cols-[repeat(auto-fill,_minmax(18%,_1fr))] gap-2 mt-4 md:mt-0">
+                <div className="md:pl-4 grid grid-cols-2 flex-1 md:grid-cols-[repeat(auto-fill,_minmax(18%,_1fr))] gap-x-2 gap-y-4 mt-4 md:mt-0">
                   <RadioInput label="일반 넥타이(날염)" value="일반 넥타이(날염)" checked={tie} setter={setTie} />
                   <RadioInput label="일반 넥타이(선염)" value="일반 넥타이(선염)" checked={tie} setter={setTie} />
                   <RadioInput label="지퍼타이" value="지퍼타이" checked={tie} setter={setTie} />
@@ -184,19 +184,19 @@ function ContactForm() {
               </div>
               <div className="md:flex items-center py-4">
                 <label className="md:w-44 w-full font-semibold bg-gray leading-[3.75rem] rounded-md block text-center">원단 재질</label>
-                <div className="md:pl-4 grid grid-cols-2 flex-1 md:grid-cols-[repeat(auto-fill,_minmax(18%,_1fr))] gap-2 mt-4 md:mt-0">
+                <div className="md:pl-4 grid grid-cols-2 flex-1 md:grid-cols-[repeat(auto-fill,_minmax(18%,_1fr))] gap-x-2 gap-y-4 mt-4 md:mt-0">
                   <RadioInput label="실크" value="실크" checked={fabric} setter={setFabric} />
                   <RadioInput label="폴리에스터" value="폴리에스터" checked={fabric} setter={setFabric} />
                 </div>
               </div>
               <div className="md:flex items-center py-4">
                 <label className="md:w-44 w-full font-semibold bg-gray leading-[3.75rem] rounded-md block text-center">디자인</label>
-                <div className="md:pl-4 grid grid-cols-2 auto-fill flex-1 md:grid-cols-[repeat(auto-fill,_minmax(18%,_1fr))] gap-2 mt-4 md:mt-0 items-center ">
+                <div className="md:pl-4 grid grid-cols-2 auto-fill flex-1 md:grid-cols-[repeat(auto-fill,_minmax(18%,_1fr))] gap-x-2 gap-y-4 mt-4 md:mt-0 items-center ">
                   <RadioInput label="디자인 있음" value="디자인 있음" checked={design} setter={setDesign} />
                   <RadioInput label="디자인 없음" value="디자인 없음" checked={design} setter={setDesign} />
                   <React.Fragment>
                     <div
-                      className="border border-textgray py-2 rounded-md col-span-3 md:col-end-auto flex items-center cursor-pointer"
+                      className="border border-inpgray py-2 rounded-md col-span-3 md:col-end-auto flex items-center cursor-pointer"
                       onClick={handleButtonClick}
                     >
                       <input
@@ -212,7 +212,7 @@ function ContactForm() {
               </div>
               <div className="md:flex items-center py-4">
                 <label className="md:w-44 w-full font-semibold bg-gray leading-[3.75rem] rounded-md block text-center">라벨</label>
-                <div className="md:pl-4 grid grid-cols-3 auto-fit flex-1 md:grid-cols-[repeat(auto-fill,_minmax(18%,_1fr))] gap-2 mt-4 md:mt-0 items-center break-keep">
+                <div className="md:pl-4 grid grid-cols-3 auto-fit flex-1 md:grid-cols-[repeat(auto-fill,_minmax(18%,_1fr))] gap-x-2 gap-y-4 mt-4 md:mt-0 items-center break-keep">
                   <RadioInput label="품표(기본)" value="품표(기본)" checked={label} setter={setLabel} />
                   <RadioInput label="로고 라벨" value="로고 라벨" checked={label} setter={setLabel} />
                   <RadioInput label="필요 없음" value="필요 없음" checked={label} setter={setLabel} />
@@ -220,7 +220,7 @@ function ContactForm() {
               </div>
               <div className="md:flex items-center py-4">
                 <label className="md:w-44 w-full font-semibold bg-gray leading-[3.75rem] rounded-md block text-center">포장</label>
-                <div className="md:pl-4 grid grid-cols-3 auto-fit flex-1 md:grid-cols-[repeat(auto-fill,_minmax(18%,_1fr))] gap-2 mt-4 md:mt-0 items-center tracking-[-0.12rem] break-keep">
+                <div className="md:pl-4 grid grid-cols-3 auto-fit flex-1 md:grid-cols-[repeat(auto-fill,_minmax(18%,_1fr))] gap-x-2 gap-y-4 mt-4 md:mt-0 items-center tracking-[-0.12rem] break-keep">
                   <RadioInput label="개별 폴리백(기본)" value="개별 폴리백(기본)" checked={box} setter={setBox} />
                   <RadioInput label="고급 하드케이스" value="고급 하드케이스" checked={box} setter={setBox} />
                   <RadioInput label="일반 케이스(종이)" value="일반 케이스(종이)" checked={box} setter={setBox} />
@@ -228,14 +228,14 @@ function ContactForm() {
               </div>
               <div className="md:flex items-center py-4">
                 <label className="md:w-44 w-full font-semibold bg-gray leading-[3.75rem] rounded-md block text-center">수량</label>
-                <div className="md:pl-4 grid grid-cols-3 auto-fit flex-1 md:grid-cols-[repeat(auto-fill,_minmax(18%,_1fr))] gap-2 mt-4 md:mt-0 items-center">
+                <div className="md:pl-4 grid grid-cols-3 auto-fit flex-1 md:grid-cols-[repeat(auto-fill,_minmax(18%,_1fr))] gap-x-2 gap-y-4 mt-4 md:mt-0 items-center">
                   <RadioInput label="100개" value="100개" checked={account} setter={setAccount} />
                   <RadioInput label="300개" value="300개" checked={account} setter={setAccount} />
                   <RadioInput label="500개" value="500개" checked={account} setter={setAccount} />
                   <div className="flex col-span-4 md:col-span-2 items-center">
                   <RadioInput label="기타" value="기타" checked={account} setter={setAccount} />
                   <input
-                    className="border border-textgray py-2.5 pl-3 rounded-md ml-2 text-textgray h-full"
+                    className="py-2.5 pl-3 rounded-md ml-2 border border-inpgray focus:ring-1 focus:outline-none focus:border-blue focus:ring-blue h-full"
                     value={accountNumber}
                     placeholder="수량을 입력해주세요."
                     name="accountNumber"
@@ -250,7 +250,7 @@ function ContactForm() {
                 </label>
                 <div className="md:pl-4 flex-1 w-full mt-4 md:mt-0">
                   <textarea
-                    className="border border-textgray py-2.5 pl-3 rounded-md w-full h-[7rem] text-textgray"
+                    className="py-2.5 pl-3 rounded-md w-full h-[7rem] border border-inpgray focus:ring-1 focus:outline-none focus:border-blue focus:ring-blue text-subgray"
                     value={request}
                     placeholder="요청사항을 입력해주세요."
                     name="request"
@@ -259,7 +259,7 @@ function ContactForm() {
                 </div>
               </div>
               <div className="md:flex justify-center mt-16">
-                <button className="bg-blue text-white w-full md:w-[27rem] h-[5.625rem] rounded-md mb-24" type="submit">
+                <button className="bg-blue text-white w-full md:w-[27rem] h-[5.625rem] rounded-md" type="submit">
                   견적 문의하기
                 </button>
               </div>

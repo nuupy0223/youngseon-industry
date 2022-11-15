@@ -6,7 +6,7 @@ export default function Gnb() {
 
 
   return (
-    <nav className="navBar area">
+    <nav className="navBar area flex justify-between items-center py-3 px-3.5 xl:px-0">
 
       <div className="navBar_logo">
         <Link to="/" className="pr-2.5 flex items-center">
@@ -15,7 +15,7 @@ export default function Gnb() {
         </Link>
       </div>
 
-      <ul className="navBar_menus flex-1 sm:flex-initial">
+      <ul className="navBar_menus flex flex-1 list-none justify-around w-[25rem] sm:flex-initial">
         <li className="navBar_menu_menu">
           <Link to="/design">
             디자인

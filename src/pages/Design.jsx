@@ -85,16 +85,16 @@ function Design() {
         </div>
       )}
       {/* 소개 시작 */}
-       <div className="design_bg h-[30vh] md:h-[300px]">
-        <div className="area px-3.5 ms:px-0">
-          <p className="pt-[5rem] md:pt-[112px] text-3xl leading-[2.8rem] text-blue pb-5 font-bold">디자인</p>
+       <div className="design_bg h-[30vh] md:h-[18.75rem]">
+        <div className="area px-3.5 xl:px-0">
+          <p className="pt-20 md:pt-28 text-3xl leading-[2.8rem] text-blue pb-5 font-bold">디자인</p>
           <p className="text-subgray pb-2.5 leading-[1.8rem]">자유롭게 이미지를 넣고 색상을 선택하여<br/>
           원하는 상품의 디자인을 손쉽게 구현할 수 있습니다.</p>
         </div>
       </div>
       {/* 본문 시작 */}
-      <div className="area px-3.5 ms:px-0">
-        <div className="mt-10 mb-10 flex flex-wrap md:flex-nowrap">
+      <div className="area px-3.5 xl:px-0 pt-16 md:pb-48 pb-32">
+        <div className="flex flex-wrap md:flex-nowrap">
           <div className="w-full md:mr-5">
             <p className="mb-6 font-semibold">디자인 미리보기</p>
             <Designer

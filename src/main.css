@@ -9,41 +9,14 @@
   position: relative;
 }
 
-/*gnb 설정*/
-.navBar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px;
-}
 
-.navBar_toggleBtn {
-  display: none;
-}
-
-.navBar_menus {
-  display: flex;
-  list-style: none;
-  justify-content: space-around;
-  width: 25rem;
-}
-
-.navBar_menus_menu link {
-  color: #d6d6d6;
-  text-decoration: none;
-}
-
-/*윈도우에서 너비 1300px로 제한*/
+/*PC에서 너비 1300px로 제한*/
 .area {
   max-width: 1300px;
   margin: 0 auto;
 }
 
 /*각 페이지별 배경이미지*/
-/* .visual_bg {
-  background-image: url(image/tie-white-background.png);
-  background-repeat: no-repeat;
-} */
 
 .hm_bg {
   background: url(image/mapBg.png) no-repeat center;
@@ -58,31 +31,3 @@
 }
 
 /* .eq_bg{background: url(image/equipment1.png) no-repeat center;} */
-
-
-/*mobile 화면 반영*/
-@media screen and (max-width: 768px) {
-
-  body {
-    padding: 0;
-    margin: 0;
-  }
-
-  .sub_t {
-    display: none;
-  }
-
-  .title_t {
-    font-size: 2.3rem;
-    line-height: 2.6rem;
-    margin: 0 10px;
-    padding: 0;
-  }
-
-  /*글씨 형광펜*/
-  .title_t>span {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 0;
-  }
-
-}

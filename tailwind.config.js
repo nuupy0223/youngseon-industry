@@ -31,6 +31,7 @@ module.exports = {
         r: "#607d8b",
         bggray: "#F6F6F6",
         textgray: "#B3B3B3",
+        inpgray: "#B0B0B0",
       },
       backgroundColor: {
         modal: "#0000003d",

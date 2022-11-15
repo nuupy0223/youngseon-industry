@@ -299,7 +299,7 @@ export default function Editor({ initialItem, elStage, initialOnChange, setSelec
           </label>
         </div>
         <div>
-          <button className="bg-blue w-full  text-white p-2 rounded" onClick={() => setDLimage(true)}>
+          <button className="bg-blue w-full  text-white p-2 rounded h-[5.625rem]" onClick={() => setDLimage(true)}>
             이미지 내려받기
           </button>
         </div>

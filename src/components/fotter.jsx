@@ -4,7 +4,7 @@ import logo from "../image/LOGO.png";
 export default function footer() {
   return (
     <footer className="bg-[#222222] pt-12 pb-20 ">
-      <form className="area flex items-center justify-between flex-col md:flex-row text-white  md:items-end px-3.5 ms:px-0">
+      <form className="area flex items-center justify-between flex-col md:flex-row text-white  md:items-end px-3.5 xl:px-0">
         <div>
           <div className="flex items-center pb-7 justify-center md:justify-start">
             <div>

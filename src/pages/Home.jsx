@@ -19,11 +19,11 @@ function Home() {
       {/* 메인 비주얼 영역 */}
       <div className="bg-lightpink overflow-hiden from-lightpink to-[#F6F1F7]">
         <div className="visual_bg md:bg-[90%_top] bg-center">
-          <div className="area relative flex flex-row items-center h-[31.250rem] justify-center sm:justify-between">
-            <div className="px-3.5 ms:px-0 absolute text-center md:text-left z-10">
+          <div className="area relative flex flex-row items-center h-[31.250rem] justify-center md:justify-between">
+            <div className="px-3.5 xl:px-0 absolute text-center md:text-left z-10">
               <p className="text-3xl leading-[2.8rem]"><span className="bg-lightpink bg-opacity-75">영선산업은 모든 고객분들에게</span><br />
                 <span className="text-blue font-bold bg-lightpink bg-opacity-75">최고의 경험으로 보답합니다.</span></p>
-              <p className="sub_t text-subgray pb-2.5 pt-10 leading-[1.8rem]">영선산업은 넥타이 제조업체에서 10년 이상 축적된 경험 및 기술로<br />
+              <p className="hidden md:block text-subgray pb-2.5 pt-10 leading-[1.8rem]">영선산업은 넥타이 제조업체에서 10년 이상 축적된 경험 및 기술로<br />
                 찾아 주시는 고객분들에게 최상의 제품을 전달해 드리기 위해<br />
                 항상 최선을 다해 제작합니다.</p>
             </div>
@@ -33,7 +33,7 @@ function Home() {
       </div>
       {/* 소개 페이지 시작 */}
       <div className="area">
-        <form className="px-3.5 ms:px-0">
+        <form className="px-3.5 xl:px-0">
           <div className="flex flex-col text-center pb-10">
             <p className="text-2xl pt-24 pb-1 leading-[2.3rem]">
               폴리부터 실크까지, 소량부터 대량까지 <br />
@@ -53,15 +53,15 @@ function Home() {
           </div>
           {/* 중간 파랑 배너 */}
 
-          <div className="mx-auto h-[5.5rem~8rem] bg-blue w-[100%] rounded-lg md:px-20 mb-24 text-[1.375rem]">
-            <Link to="/design" className="">
+          <div className="mx-auto h-[5.5rem~8rem] bg-blue w-[100%] rounded-lg md:px-20 mb-24 text-[1.375rem] ease-in-out">
+            <Link to="/design">
               <div className="mx-auto md:w-[80%] flex items-center justify-around ">
-                <img src={tieGroup} alt="tie group" />
+                <img className="opacity-0 sm:opacity-100" src={tieGroup} alt="tie group" />
                 <div className="flex text-white flex-wrap md:w-[40vw] md:justify-evenly bg-blue/80 rounded-lg ml-[-8.5rem] z-10 p-3 md:ml-0 ">
                   <span className="font-semibold mr-1">도안이 필요하신가요?</span>
                   <span>쉽고 빠르게 원하는 조합의 도안을 제작<br className="sm:hidden" /> 해보세요.</span>
                 </div>
-                <img className="px-3" src={rightArrow} alt="rightArrow" />
+                <img className="px-4" src={rightArrow} alt="rightArrow" />
               </div>
             </Link>
           </div>
@@ -94,7 +94,7 @@ function Home() {
       </div>
       {/* 파트너 기업 */}
       <div className="bg-subgray2 overflow-hidden">
-        <div className="area px-3.5 ms:px-0 pt-20 pb-12">
+        <div className="area px-3.5 xl:px-0 pt-20 pb-12">
           <p className="text-[1.375rem] leading-[2.275rem]">THE BEST PARTNERS<br />
             <span className="font-bold">영선산업은 고객사와 함께합니다.</span></p>
         </div>

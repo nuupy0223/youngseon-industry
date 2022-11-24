@@ -6,17 +6,17 @@ export default function Gnb() {
 
 
   return (
-    <nav className="navBar area flex justify-between items-center py-3 px-3.5 xl:px-0">
+    <nav className="area flex justify-between items-center py-3 px-3.5 xl:px-0">
 
-      <div className="navBar_logo">
+      <div className="ml-[-.5rem]">
         <Link to="/" className="pr-2.5 flex items-center">
           <img src={logo} alt="logo" />
-          <span className="text-lg font-bold pl-2.5">영 선 산 업</span>
+          <span className="text-lg font-bold pl-2.5 hidden sm:block">영 선 산 업</span>
         </Link>
       </div>
 
-      <ul className="navBar_menus flex flex-1 list-none justify-around w-[25rem] sm:flex-initial">
-        <li className="navBar_menu_menu">
+      <ul className="flex flex-1 list-none justify-between flex-wrap w-[25rem] sm:flex-initial text-sm sm:text-base">
+        <li>
           <Link to="/design">
             디자인
           </Link>

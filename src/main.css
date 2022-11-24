@@ -30,4 +30,15 @@
   background: url(image/contactBg.png) no-repeat center;
 }
 
-/* .eq_bg{background: url(image/equipment1.png) no-repeat center;} */
+/* 문자 단위로 줄바꿈 */ 
+.keep-all
+{word-break: keep-all;}
+
+/* 글줄 넘칠 시 말줄임 처리 */
+.text-over-ellipsis
+{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /*보일 줄 수*/
+    -webkit-box-orient: vertical;
+}

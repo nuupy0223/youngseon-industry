@@ -6,7 +6,7 @@ function HomeMap() {
     <>
         <div className="wrap">
           <div className="hm_bg h-[30vh] md:h-[18.75rem] overflow-hidden">
-              <div className="area px-3.5 xl:px-0">
+              <div className="area px-3.5 xl:px-0 pb-10">
                 <p className="pt-10 sm:pt-20 md:pt-28 text-3xl leading-[2.8rem] text-blue pb-5 font-bold">오시는 길</p>
                 <span className="text-subgray leading-[1.8rem] text-over-ellipsis">영선산업은 가양네거리 근처<br />
                 큰길거리에 위치하여 쉽게 찾아오실 수 있습니다.</span>

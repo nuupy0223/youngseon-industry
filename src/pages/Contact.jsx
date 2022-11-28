@@ -105,7 +105,7 @@ function ContactForm() {
       {/* 소개 시작 */}
       <div className="wrap">
         <div className="cont_bg h-[30vh] md:h-[18.75rem] overflow-hidden">
-          <div className="area px-3.5 xl:px-0 ">
+          <div className="area px-3.5 xl:px-0 pb-10">
             <p className="pt-10 sm:pt-20 md:pt-28 text-3xl leading-[2.8rem] text-blue pb-5 font-bold">견적 문의</p>
             <span className="text-subgray leading-[1.8rem] text-over-ellipsis">영선산업에서 제공하는 최상의 품질과 기술력을 직접 경험해보세요.<br />
             문의를 남겨주시면 최대한 빠르게 답변드리겠습니다.</span>

@@ -86,7 +86,7 @@ function Design() {
       )}
       {/* 소개 시작 */}
        <div className="design_bg h-[30vh] md:h-[18.75rem] overflow-hidden">
-        <div className="area px-3.5 xl:px-0">
+        <div className="area px-3.5 xl:px-0 pb-10">
           <p className="pt-10 sm:pt-20 md:pt-28 text-3xl leading-[2.8rem] text-blue pb-5 font-bold">디자인</p>
           <span className="text-subgray leading-[1.8rem] text-over-ellipsis">자유롭게 이미지를 넣고 색상을 선택하여<br />
           원하는 상품의 디자인을 손쉽게 구현할 수 있습니다.</span>
